@@ -7,7 +7,7 @@ this is implementation of the RAG system for question answering.
 
 ### Install python using MiniConda
 
-1) Download and install MiniConda from here (https://www.anaconda.com/docs/getting-started/miniconda/install#windows-installation)
+1) Download and install MiniConda from [here](https://docs.anaconda.com/free/miniconda/#quick-command-line-install)
 2) create new env using the following command:
 ```bash
 $ conda create -n mini-rag python=3.8
@@ -16,3 +16,18 @@ $ conda create -n mini-rag python=3.8
 ```bash 
 $ conda Activate mini-rag
 ```
+## Installation
+
+### Install the required packages
+
+```bash
+$ pip install -r requirements.txt
+```
+
+### Setup the environment variables
+
+```bash
+$ cp .env.example .env
+```
+
+Set your environment variables in the `.env` file. Like `OPENAI_API_KEY` value.
