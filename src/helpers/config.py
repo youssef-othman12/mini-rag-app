@@ -1,4 +1,4 @@
-from ptdantic_settings import BaseSettings , SettingsConfigDict
+from pydantic_settings import BaseSettings , SettingsConfigDict
 
 class settings(BaseSettings):
     
@@ -6,9 +6,9 @@ class settings(BaseSettings):
     APP_VERSION: str
     OPENAI_API_KEY: str
     
-    FILE_ALLOWED_EXTENSIONS : list
+    FILE_ALLOWED_TYPES : list
     FILE_MAX_SIZE : int
-
+    model_config = SettingsConfigDict(env_file=".env")
     class config:
         env_file=".env"
 def get_settings():
