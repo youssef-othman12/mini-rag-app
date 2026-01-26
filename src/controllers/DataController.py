@@ -12,3 +12,5 @@ class DataController(BaseController):
             return False , ResponseSignal.FILE_SIZE_EXCEEDED.value
         
         return True ,ResponseSignal.FILE_VALIDATED_SUCCESS.value
+    def generate_unique_filename(self, orig_file_name:str,project_id):
+        random_filename  = self.generate_random_string()
